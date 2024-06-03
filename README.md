@@ -12,10 +12,6 @@ This full-stack application simulates live equity trading in a cloud environment
 - **Favorites Section**: Allows users to shortlist stocks to monitor.
 - **Swipe and Delete** as well as **Drag and Reorder** functionalities have been implemented.
 
-### Top News
-- Shows relevant news articles and updates about the company. Shows relevant news articles and updates about the company.
-- Clicking on any news item card opens a modal with clickable links to share the news article as a post on Twitter or Facebook.
-
 <div style="display: flex;">
   <img src="images/12.png" width="250" height="450">
   <img src="images/1.png" width="250" height="450">
