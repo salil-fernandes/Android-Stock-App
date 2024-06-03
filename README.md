@@ -17,6 +17,16 @@ This full-stack application simulates live equity trading in a cloud environment
 - Clicking on any news item card opens a modal with clickable links to share the news article as a post on Twitter or Facebook.
 
 <div style="display: flex;">
+  <img src="images/12.png" width="250" height="450">
+  <img src="images/1.png" width="250" height="450">
   <img src="images/2.png" width="250" height="450">
   <img src="images/3.png" width="250" height="450">
+  <img src="images/4.png" width="250" height="450">
+  <img src="images/5.png" width="250" height="450">
+  <img src="images/6.png" width="250" height="450">
+  <img src="images/7.png" width="250" height="450">
+  <img src="images/8.png" width="250" height="450">
+  <img src="images/9.png" width="250" height="450">
+  <img src="images/10.png" width="250" height="450">
+  <img src="images/11.png" width="250" height="450">
 </div>
