@@ -13,16 +13,16 @@ This full-stack application simulates live equity trading in a cloud environment
 - **Swipe and Delete** as well as **Drag and Reorder** functionalities have been implemented.
 
 <div style="display: flex;">
-  <img src="images/12.png" width="250" height="480">
-  <img src="images/1.png" width="250" height="480">
-  <img src="images/2.png" width="250" height="480">
-  <img src="images/3.png" width="250" height="480">
-  <img src="images/4.png" width="250" height="480">
-  <img src="images/5.png" width="250" height="480">
-  <img src="images/6.png" width="250" height="480">
-  <img src="images/7.png" width="250" height="480">
-  <img src="images/8.png" width="250" height="480">
-  <img src="images/9.png" width="250" height="480">
-  <img src="images/10.png" width="250" height="480">
-  <img src="images/11.png" width="250" height="480">
+  <img src="screenshots/12.png" width="250" height="480">
+  <img src="screenshots/1.png" width="250" height="480">
+  <img src="screenshots/2.png" width="250" height="480">
+  <img src="screenshots/3.png" width="250" height="480">
+  <img src="screenshots/4.png" width="250" height="480">
+  <img src="screenshots/5.png" width="250" height="480">
+  <img src="screenshots/6.png" width="250" height="480">
+  <img src="screenshots/7.png" width="250" height="480">
+  <img src="screenshots/8.png" width="250" height="480">
+  <img src="screenshots/9.png" width="250" height="480">
+  <img src="screenshots/10.png" width="250" height="480">
+  <img src="screenshots/11.png" width="250" height="480">
 </div>
