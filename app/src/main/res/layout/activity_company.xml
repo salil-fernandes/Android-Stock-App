@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompanyActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="clip_vertical">
+
+                <ImageView
+                    android:id="@+id/back_button_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    app:srcCompat="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/toolbar_title_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/starIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="350dp"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CompanyActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="185dp"
+                android:layout_marginTop="350dp"
+                android:indeterminateTint="@color/selected_tab"
+                android:progressTint="@color/selected_tab"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/companyContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="55dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="55dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/profileCurrentPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="23dp"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/profileTicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="85dp"
+                        android:layout_marginTop="12dp"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/profileChangeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="26dp"
+                        android:text="TextView"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileCurrentPrice" />
+
+                    <TextView
+                        android:id="@+id/profileCompanyName"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="85dp"
+                        android:layout_marginTop="6dp"
+                        android:text="TextView"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileTicker" />
+
+                    <ImageView
+                        android:id="@+id/companyLogo"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <WebView
+                    android:id="@+id/hourlyHistoricalChartWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/chartTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    app:tabIconTint="#000000"
+                    app:tabIndicatorColor="#000000">
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/comapnyPortfolioTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Portfolio"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companySharesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="30dp"
+                        android:text="Shares Owned:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyShareCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toEndOf="@+id/companySharesTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyAvgCostTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="54dp"
+                        android:text="Avg. Cost/Share:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyAvgCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$0.00"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toEndOf="@+id/companyAvgCostTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/companyShareCount" />
+
+                    <TextView
+                        android:id="@+id/companyTotalCostTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="78dp"
+                        android:text="Total Cost:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyTotalCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="57dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$0.00"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toEndOf="@+id/companyTotalCostTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/companyAvgCost" />
+
+                    <TextView
+                        android:id="@+id/companyMarketValueTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="126dp"
+                        android:text="Market Value:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyChageTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="102dp"
+                        android:text="Change:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginTop="5dp"
+                        android:text="$0.00"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toEndOf="@+id/companyChageTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/companyTotalCost" />
+
+                    <Button
+                        android:id="@+id/tradeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="56dp"
+                        android:layout_marginEnd="36dp"
+                        android:backgroundTint="#0FA028"
+                        android:text="TRADE"
+                        app:cornerRadius="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyStatsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="160dp"
+                        android:text="Stats"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyOpenTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="190dp"
+                        android:text="Open Price:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyLowTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="214dp"
+                        android:text="Low Price:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyHighTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="240dp"
+                        android:layout_marginTop="190dp"
+                        android:text="High Price:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyCloseTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="240dp"
+                        android:layout_marginTop="214dp"
+                        android:text="Prev. Close:"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyOpenPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="190dp"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyHighPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="325dp"
+                        android:layout_marginTop="190dp"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyLowPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="214dp"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyClosePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="325dp"
+                        android:layout_marginTop="214dp"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyMarketValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="4dp"
+                        android:text="$0.00"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toEndOf="@+id/companyMarketValueTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/companyChange" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/companyAboutTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="About"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyIPOTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="50dp"
+                        android:text="IPO Start Date"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyIndustryTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="74dp"
+                        android:text="Industry"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyWebpageTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="98dp"
+                        android:text="Webpage"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyPeersTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="122dp"
+                        android:text="Company Peers"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <HorizontalScrollView
+                        android:layout_width="215dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="122dp"
+                        android:scrollbars="none"
+                        app:layout_constraintStart_toEndOf="@+id/companyPeersTitle"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/peersLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="1dp"></LinearLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/companyIPODate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="33dp"
+                        android:layout_marginTop="50dp"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toEndOf="@+id/companyIPOTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/companyIndustry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="5dp"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toEndOf="@+id/companyIndustryTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/companyIPODate" />
+
+                    <TextView
+                        android:id="@+id/companyWebpage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="62dp"
+                        android:layout_marginTop="5dp"
+                        android:text="TextView"
+                        android:textColor="@color/selected_tab"
+                        app:layout_constraintStart_toEndOf="@+id/companyWebpageTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/companyIndustry" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Insights"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/socialSentimentsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginTop="60dp"
+                        android:text="Social Sentiments"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TableLayout
+                        android:layout_width="320dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginTop="100dp"
+                        android:stretchColumns="*"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tableCompanyName"
+                                style="@style/ColumnHeaderStyle"
+                                android:text="Apple Inc"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                style="@style/ColumnHeaderStyle"
+                                android:text="MSRP"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                style="@style/ColumnHeaderStyle"
+                                android:text="Change"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                style="@style/ColumnHeaderStyle"
+                                android:text="Total"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tableTotalMsrp"
+                                style="@style/ColumnTextStyle"
+                                android:text="MSRP"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tableTotalChange"
+                                style="@style/ColumnTextStyle"
+                                android:text="Change"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                style="@style/ColumnHeaderStyle"
+                                android:text="Positive"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tablePositiveMsrp"
+                                style="@style/ColumnTextStyle"
+                                android:text="MSRP"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tablePositiveChange"
+                                style="@style/ColumnTextStyle"
+                                android:text="Change"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                style="@style/ColumnHeaderStyle"
+                                android:text="Negative"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tableNegativeMsrp"
+                                style="@style/ColumnTextStyle"
+                                android:text="MSRP"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tableNegativeChange"
+                                style="@style/ColumnTextStyle"
+                                android:text="Change"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                    </TableLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <WebView
+                    android:id="@+id/recommendationChartWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="visible" />
+
+                <WebView
+                    android:id="@+id/earningsChartWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/newsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

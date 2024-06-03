@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:backgroundTint="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/newsDialogSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="35dp"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/newsDialogDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newsDialogSource" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="325dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="17dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newsDialogDate" />
+
+            <TextView
+                android:id="@+id/newsDialogHeadline"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/newsDialogSummary"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newsDialogHeadline" />
+
+            <ImageView
+                android:id="@+id/newsDialogChromeIcon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newsDialogSummary"
+                app:srcCompat="@drawable/chrome" />
+
+            <ImageView
+                android:id="@+id/newsDialogXIcon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toEndOf="@+id/newsDialogChromeIcon"
+                app:layout_constraintTop_toBottomOf="@+id/newsDialogSummary"
+                app:srcCompat="@drawable/twitter_x_icon" />
+
+            <ImageView
+                android:id="@+id/newsDialogFacebookIcon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toEndOf="@+id/newsDialogXIcon"
+                app:layout_constraintTop_toBottomOf="@+id/newsDialogSummary"
+                app:srcCompat="@drawable/facebook" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

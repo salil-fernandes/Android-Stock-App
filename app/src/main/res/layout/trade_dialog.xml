@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:backgroundTint="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/darkgreen"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/tradeDialogTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Trade Apple Inc shares"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tradeDialogShareInput"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="48dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tradeDialogTitle" />
+
+            <TextView
+                android:id="@+id/tradeDialogSharesWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="136dp"
+                android:layout_marginEnd="38dp"
+                android:text="shares"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tradeDialogShareCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="3dp"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/tradeDialogCurrentPrice"
+                app:layout_constraintTop_toBottomOf="@+id/tradeDialogShareInput" />
+
+            <TextView
+                android:id="@+id/tradeDialogCurrentPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="3dp"
+                android:text="* $172.94"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/tradeDialogEqualSign"
+                app:layout_constraintTop_toBottomOf="@+id/tradeDialogShareInput" />
+
+            <TextView
+                android:id="@+id/tradeDialogEqualSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="191dp"
+                android:layout_marginEnd="5dp"
+                android:text="/share ="
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/tradeDialogTotal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tradeDialogTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="57dp"
+                android:text="0.00"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tradeDialogSharesWord" />
+
+            <TextView
+                android:id="@+id/tradeDialogBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="$25000.00 to buy AAPL"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tradeDialogShareCount" />
+
+            <Button
+                android:id="@+id/tradeDialogBuyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="35dp"
+                android:backgroundTint="@color/darkgreen"
+                android:text="BUY"
+                app:cornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tradeDialogBalance" />
+
+            <Button
+                android:id="@+id/tradeDialogSellButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/darkgreen"
+                android:text="SELL"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tradeDialogBalance" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
